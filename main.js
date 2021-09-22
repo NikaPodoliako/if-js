@@ -37,29 +37,29 @@ const arr3 = [2, 5, 8, 15, 0, 6, 20, 3];
 
 	//lesson-3
 
-let palindromeWord = 'kok';
+const palindromeWord = 'kok';
 const newPal = palindromeWord.split('').reverse().join('');
 function palidrome() {
-	(newPal === palindromeWord) ? console.log(true) : console.log(false); 
+	return newPal === palindromeWord;
 }
-palidrome();
+console.log(palidrome());
 
 
 function min(a, b) {
 		if (a < b) {
-			console.log('Min number', a);
+			return a;
 	} 	else {
-			console.log('Min number', b);
+			return b;
 	}
 }
-min(9, 8);
+console.log('Min number - ', min(9, 8));
 
-function max(a, y) {
-	(a > y) ? console.log('Max number', a) : console.log('max number', y)
+function max(x, y) {
+	return (x > y) ? x : y 
 }
-max(5, 2);
+console.log ('Max number - ', max(5, 2));
 
-let arr = [58, 96, 12, 73, 28, 35, 5, 88, 0, 41, 100]; // данное дз показала Марта, сама сделать его не смогла, до сих немного не понимаю его
+const arr5 = [58, 96, 12, 73, 28, 35, 5, 88, 0, 41, 100]; // данное дз показала Марта, сама сделать его не смогла, до сих немного не понимаю его
 function changeNumber(a) {
 	const num = a.join('-');
 	if (num.includes('0')){
@@ -67,4 +67,5 @@ function changeNumber(a) {
 	}
 	return num;
 }
-console.log([arr].map(changeNumber)); 
+console.log([arr5].map(changeNumber)); 
+
