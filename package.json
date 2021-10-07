@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint-write": "eslint --debug",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,13 +21,18 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.24.0",
-    "husky": "^7.0.2"
+    "husky": "^7.0.2",
+    "jest": "^27.2.4",
+    "prettier": "2.4.1"
   },
   "dependencies": {
     "lint-staged": "^11.1.2"
   },
   "lint-staget": {
-    "*.(js|jsx)": ["npm run lint:write", "git add"]
+    "*.(js|jsx)": [
+      "npm run lint:write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
